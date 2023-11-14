@@ -42,6 +42,4 @@ public class Car {
         this.numberPlate = numberPlate;
     }
 
-    // method for creating a car. a car has a numberplate, colour and a brand
-
 }

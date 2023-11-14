@@ -1,4 +1,5 @@
 public class OatMilk {
+
     int fat;
     double cubicLiters;
 

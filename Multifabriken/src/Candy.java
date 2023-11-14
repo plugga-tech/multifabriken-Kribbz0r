@@ -8,11 +8,6 @@ public class Candy {
         this.taste = taste;
     }
 
-    public void addCandy(String taste, int age) {
-        // needs Order.java to have a place to store the candy in.
-
-    }
-
     public int getAmount() {
         return amount;
     }

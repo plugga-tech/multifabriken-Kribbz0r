@@ -8,10 +8,26 @@ public class Order {
     // static ArrayList<Pipe> pipes = new ArrayList<>();
     // static ArrayList<OatMilk> oatMilks = new ArrayList<>();
 
-    public ArrayList<Order> orderItems = new ArrayList<>();
+    private ArrayList<Order> orderItems = new ArrayList<>();
 
     Order() {
 
+    }
+
+    public void addCandy(int amount, String taste) {
+        orderItems.add(amount, taste);
+    }
+
+    public void addCar(String color, String brand, String numberPlate) {
+        orderItems.add(color, brand, numberPlate);
+    }
+
+    public void addPipe(int diameter, int length) {
+        orderItems.add(new Pipe(diameter, length));
+    }
+
+    public void addOatMilk(int fat, double cubicLiters) {
+        orderItems.add(new OatMilk(fat, cubicLiters));
     }
 
     // public ArrayList<Car> getCars() {

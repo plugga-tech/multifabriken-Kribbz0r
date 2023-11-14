@@ -1,21 +1,17 @@
 public class Pipe {
-    double diameter;
+    int diameter;
     int length;
 
-    private Pipe(double diameter, int length) {
+    public Pipe(int diameter, int length) {
         this.diameter = diameter;
         this.length = length;
     }
 
-    // public void addPipe(double diameter, int length) {
-    // Order.orderItems.add(diameter, length);
-    // }
-
-    public double getDiameter() {
+    public int getDiameter() {
         return diameter;
     }
 
-    public void setDiameter(double diameter) {
+    public void setDiameter(int diameter) {
         this.diameter = diameter;
     }
 
