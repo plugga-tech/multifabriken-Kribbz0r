@@ -1,5 +1,10 @@
+import java.util.Scanner;
+
 public class App {
+    public static Order orderItems = new Order();
+
     public static void main(String[] args) throws Exception {
+        Scanner input = new Scanner(System.in);
 
         // method that lists what can be ordered.
 
@@ -13,5 +18,6 @@ public class App {
         // option 5, print what the user has ordered.
         // option 6, exit the app
 
+        System.out.println("Pipes: ");
     }
 }
