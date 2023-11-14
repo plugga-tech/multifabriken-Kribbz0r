@@ -6,8 +6,8 @@ public class Car {
     private String brand;
     private String numberPlate;
 
-    // List of cars
-    private ArrayList<Car> cars;
+    // List of cars is removed and all future lists are in Order.java
+    // Try to make one list for everything
 
     // constructor for cars.
     private Car() {
