@@ -1,6 +1,6 @@
 public class Pipe {
-    int diameter;
-    int length;
+    public int diameter;
+    public int length;
 
     public Pipe(int diameter, int length) {
         this.diameter = diameter;

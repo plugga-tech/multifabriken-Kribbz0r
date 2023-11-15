@@ -3,31 +3,31 @@ import java.util.ArrayList;
 public class Order {
 
     // all lists that can store things. Find out if its doable in one list later.
-    // static ArrayList<Candy> candies = new ArrayList<>();
-    // static ArrayList<Car> cars = new ArrayList<>();
-    // static ArrayList<Pipe> pipes = new ArrayList<>();
-    // static ArrayList<OatMilk> oatMilks = new ArrayList<>();
+    public ArrayList<Candy> candies = new ArrayList<>();
+    public ArrayList<Car> cars = new ArrayList<>();
+    public static ArrayList<Pipe> pipes = new ArrayList<>();
+    public ArrayList<OatMilk> oatMilks = new ArrayList<>();
 
-    private ArrayList<Order> orderItems = new ArrayList<>();
+    public ArrayList<Order> orderItems = new ArrayList<>();
 
     Order() {
 
     }
 
-    public void addCandy(int amount, String taste) {
-        orderItems.add(amount, taste);
-    }
+    // public void addCandy(int amount, String taste) {
+    // candies.add(amount, taste);
+    // }
 
-    public void addCar(String color, String brand, String numberPlate) {
-        orderItems.add(color, brand, numberPlate);
-    }
+    // public void addCar(String color, String brand, String numberPlate) {
+    // cars.add(color, brand, numberPlate);
+    // }
 
     public void addPipe(int diameter, int length) {
-        orderItems.add(new Pipe(diameter, length));
+        pipes.add(new Pipe(diameter, length));
     }
 
     public void addOatMilk(int fat, double cubicLiters) {
-        orderItems.add(new OatMilk(fat, cubicLiters));
+        oatMilks.add(new OatMilk(fat, cubicLiters));
     }
 
     // public ArrayList<Car> getCars() {

@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Car {
     // Things cars have
     private String color;
@@ -10,7 +8,7 @@ public class Car {
     // Try to make one list for everything
 
     // constructor for cars.
-    private Car(String color, String brand, String numberPlate) {
+    public Car(String color, String brand, String numberPlate) {
 
         this.brand = brand;
         this.color = color;

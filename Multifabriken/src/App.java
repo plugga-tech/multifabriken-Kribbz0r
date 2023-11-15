@@ -18,6 +18,11 @@ public class App {
         // option 5, print what the user has ordered.
         // option 6, exit the app
 
-        System.out.println("Pipes: ");
+        int length = input.nextInt();
+        int diameter = input.nextInt();
+        Order.pipes.add(new Pipe(length, diameter));
+
+        for (int i = 0; i < Order.pipes.size(); i++)
+            System.out.println("Pipes: " + Order.pipes.get(i));
     }
 }
