@@ -1,4 +1,4 @@
-public class Car {
+class Car {
     // Things cars have
     private String color;
     private String brand;

@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class App {
-    public static Order orderItems = new Order();
+
+    public static Order pipes = new Order();
 
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
@@ -20,9 +21,11 @@ public class App {
 
         int length = input.nextInt();
         int diameter = input.nextInt();
-        Order.pipes.add(new Pipe(length, diameter));
+        pipes.addPipe(length, diameter);
 
-        for (int i = 0; i < Order.pipes.size(); i++)
-            System.out.println("Pipes: " + Order.pipes.get(i));
+        for (Pipe pipe : pipes.getPipes()) {
+            System.out.println("Pipes length: " + pipe.getLength());
+            System.out.println("Pipes diameter: " + pipe.getDiameter());
+        }
     }
 }

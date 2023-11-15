@@ -1,12 +1,11 @@
-public class OatMilk {
+class OatMilk {
 
-    int fat;
-    double cubicLiters;
+    private int fat;
+    private double cubicLiters;
 
     public OatMilk(int fat, double cubicLiters) {
         this.fat = fat;
         this.cubicLiters = cubicLiters;
-
     }
 
     public int getFat() {

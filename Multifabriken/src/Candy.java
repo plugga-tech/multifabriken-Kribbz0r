@@ -1,6 +1,6 @@
-public class Candy {
-    int amount;
-    String taste;
+class Candy {
+    private int amount;
+    private String taste;
 
     private Candy(String taste, int amount) {
 
