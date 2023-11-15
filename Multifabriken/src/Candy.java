@@ -2,7 +2,7 @@ class Candy {
     private int amount;
     private String taste;
 
-    private Candy(String taste, int amount) {
+    public Candy(String taste, int amount) {
 
         this.amount = amount;
         this.taste = taste;

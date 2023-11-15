@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class App {
 
     public static Order pipes = new Order();
+    public static Order oatMilks = new Order();
+    public static Order cars = new Order();
+    public static Order candies = new Order();
 
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
@@ -21,11 +24,24 @@ public class App {
 
         int length = input.nextInt();
         int diameter = input.nextInt();
-        pipes.addPipe(length, diameter);
+        pipes.addItem(length, diameter);
+        int length2 = 6;
+        int diameter2 = 7;
+        pipes.addItem(diameter2, length2);
+
+        String color = "red";
+        String brand = "volvo";
+        String numberPlate = "KDP 111";
+        cars.addItem(color, brand, numberPlate);
 
         for (Pipe pipe : pipes.getPipes()) {
             System.out.println("Pipes length: " + pipe.getLength());
             System.out.println("Pipes diameter: " + pipe.getDiameter());
+        }
+        for (Car car : cars.getCars()) {
+            System.out.println("Brand: " + car.getBrand());
+            System.out.println("Colour: " + car.getColor());
+            System.out.println("Number plate: " + car.getNumberPlate());
         }
     }
 }

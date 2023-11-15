@@ -14,20 +14,20 @@ public class Order {
 
     }
 
-    // public void addCandy(int amount, String taste) {
-    // candies.add(amount, taste);
-    // }
-
-    // public void addCar(String color, String brand, String numberPlate) {
-    // cars.add(color, brand, numberPlate);
-    // }
-
-    public void addPipe(int diameter, int length) {
+    public void addItem(int diameter, int length) {
         pipes.add(new Pipe(diameter, length));
     }
 
-    public void addOatMilk(int fat, double cubicLiters) {
-        oatMilks.add(new OatMilk(fat, cubicLiters));
+    public void addItem(int diameter, double length) {
+        oatMilks.add(new OatMilk(diameter, length));
+    }
+
+    public void addItem(String color, String numberPlate, String brand) {
+        cars.add(new Car(color, numberPlate, brand));
+    }
+
+    public void addItem(String taste, int amount) {
+        candies.add(new Candy(taste, amount));
     }
 
     public ArrayList<Candy> getCandies() {
