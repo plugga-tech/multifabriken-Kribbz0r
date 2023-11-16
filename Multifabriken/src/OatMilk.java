@@ -1,18 +1,18 @@
 class OatMilk {
 
-    private int fat;
+    private double fat;
     private double cubicLiters;
 
-    public OatMilk(int fat, double cubicLiters) {
+    public OatMilk(double fat, double cubicLiters) {
         this.fat = fat;
         this.cubicLiters = cubicLiters;
     }
 
-    public int getFat() {
+    public double getFat() {
         return fat;
     }
 
-    public void setFat(int fat) {
+    public void setFat(double fat) {
         this.fat = fat;
     }
 

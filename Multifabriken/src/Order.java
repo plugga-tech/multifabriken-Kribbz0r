@@ -1,14 +1,30 @@
 import java.util.ArrayList;
+import java.util.*;
 
 public class Order {
 
     // all lists that can store things. Find out if its doable in one list later.
+
+    // Lista med Godis. Godis har en String och en int.
     private ArrayList<Candy> candies = new ArrayList<>();
+
+    // Lista med Bilar. Bilar har tre Strings.
     private ArrayList<Car> cars = new ArrayList<>();
+
+    // Lista med rör. Rör har två int.
     private ArrayList<Pipe> pipes = new ArrayList<>();
+
+    // Lista med havremjölk. Havremjölk har två double.
     private ArrayList<OatMilk> oatMilks = new ArrayList<>();
 
-    // private ArrayList<Order> orderItems = new ArrayList<>();
+    private ArrayList<ArrayList<Order>> orderList = new ArrayList<>();
+
+    // public void combineLists() {
+    // orderList.add(candies);
+    // orderList.add(cars);
+    // orderList.add(pipes);
+    // orderList.add(oatMilks);
+    // }
 
     Order() {
 
@@ -18,7 +34,7 @@ public class Order {
         pipes.add(new Pipe(diameter, length));
     }
 
-    public void addItem(int diameter, double length) {
+    public void addItem(double diameter, double length) {
         oatMilks.add(new OatMilk(diameter, length));
     }
 
@@ -62,12 +78,12 @@ public class Order {
         this.oatMilks = oatMilks;
     }
 
-    // public ArrayList<Order> getOrderItems() {
-    // return orderItems;
-    // }
+    public ArrayList<ArrayList<Order>> getorderList() {
+        return orderList;
+    }
 
-    // public void setOrderItems(ArrayList<Order> orderItems) {
-    // this.orderItems = orderItems;
-    // }
+    public void setorderList(ArrayList<ArrayList<Order>> orderList) {
+        this.orderList = orderList;
+    }
 
 }
