@@ -1,4 +1,4 @@
-class Car {
+class Car extends Product {
     // Things cars have
     private String color;
     private String brand;
