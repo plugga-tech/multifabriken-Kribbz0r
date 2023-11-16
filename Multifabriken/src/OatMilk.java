@@ -1,4 +1,4 @@
-class OatMilk extends Product {
+class OatMilk {
 
     private double fat;
     private double cubicLiters;
@@ -12,15 +12,8 @@ class OatMilk extends Product {
         return fat;
     }
 
-    public void setFat(double fat) {
-        this.fat = fat;
-    }
-
     public double getCubicLiters() {
         return cubicLiters;
     }
 
-    public void setCubicLiters(double cubicLiters) {
-        this.cubicLiters = cubicLiters;
-    }
 }

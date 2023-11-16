@@ -1,4 +1,4 @@
-class Pipe extends Product {
+class Pipe {
     private int diameter;
     private int length;
 
@@ -11,15 +11,8 @@ class Pipe extends Product {
         return diameter;
     }
 
-    public void setDiameter(int diameter) {
-        this.diameter = diameter;
-    }
-
     public int getLength() {
         return length;
     }
 
-    public void setLength(int length) {
-        this.length = length;
-    }
 }

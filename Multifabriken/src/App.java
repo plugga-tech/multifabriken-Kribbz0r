@@ -103,10 +103,10 @@ public class App {
                     System.out.println("Havremjölk:");
                     System.out.println("");
                     for (OatMilk oatMilk : oatMilks.getOatMilks()) {
-                        System.out.println();
                         System.out.println(
                                 oatMilk.getCubicLiters() + " liter havremjölk som har " + oatMilk.getFat()
                                         + "% fetthalt");
+                        System.out.println("");
                     }
 
                     System.out.println("*********************************************************");

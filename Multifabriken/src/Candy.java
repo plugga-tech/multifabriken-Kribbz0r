@@ -1,4 +1,4 @@
-class Candy extends Product {
+class Candy {
     private int amount;
     private String taste;
 
@@ -12,15 +12,8 @@ class Candy extends Product {
         return amount;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
     public String getTaste() {
         return taste;
     }
 
-    public void setTaste(String taste) {
-        this.taste = taste;
-    }
 }
