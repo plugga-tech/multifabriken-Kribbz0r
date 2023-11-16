@@ -1,4 +1,4 @@
-class Pipe {
+class Pipe extends Product {
     private int diameter;
     private int length;
 

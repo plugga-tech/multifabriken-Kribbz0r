@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 public class App {
 
-    // Oklart om jag behöver alla just nu. Ska bli en Order när alla listor är
-    // samlade i en lista.
     public static Order pipes = new Order();
     public static Order oatMilks = new Order();
     public static Order cars = new Order();
     public static Order candies = new Order();
+
+    static void errorMessage() {
+        System.out.println("Nu blev något fel! Försök igen.");
+    }
 
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
@@ -15,7 +17,6 @@ public class App {
         System.out.println("Hej och välkommen till Multifabriken AB!");
         System.out.println("Hos oss kan du köpa Bilar, Godis, Rör och Havremjölk!");
         while (run == true) {
-            // method that lists what can be ordered.
             System.out.println("Vad vill du göra?");
             System.out.println("A: Köp en bil");
             System.out.println("B: Köp rör");
@@ -37,32 +38,62 @@ public class App {
 
                 case "B":
                     System.out.println("Hur många meter rör vill du ha?");
-                    int length = input.nextInt();
-                    input.nextLine();
-                    System.out.println("Hur stor är diametern? Ange mm:");
-                    int diameter = input.nextInt();
-                    input.nextLine();
-                    pipes.addItem(diameter, length);
-                    break;
+
+                    int length;
+                    if (input.hasNextInt() && (length = input.nextInt()) > 0) {
+                        input.nextLine();
+                        System.out.println("Hur stor är diametern? Ange mm:");
+                        int diameter;
+                        if (input.hasNextInt() && (diameter = input.nextInt()) > 0) {
+                            input.nextLine();
+                            pipes.addItem(diameter, length);
+                            break;
+
+                        } else {
+                            errorMessage();
+                            break;
+                        }
+
+                    } else {
+                        errorMessage();
+                        break;
+                    }
 
                 case "C":
                     System.out.println("Vad ska godiset ha för smak?");
                     String taste = input.nextLine();
                     System.out.println("Hur många godisbitar vill du köpa?");
-                    int amount = input.nextInt();
-                    input.nextLine();
-                    candies.addItem(taste, amount);
-                    break;
+                    int amount;
+                    if (input.hasNextInt() && (amount = input.nextInt()) > 0) {
+                        input.nextLine();
+                        candies.addItem(taste, amount);
+                        break;
+
+                    } else {
+                        errorMessage();
+                        break;
+                    }
 
                 case "D":
                     System.out.println("Hur fet ska havremjölken vara?");
-                    double fat = input.nextDouble();
-                    input.nextLine();
-                    System.out.println("Hur många liter vill du köpa");
-                    double cubicLiters = input.nextDouble();
-                    input.nextLine();
-                    oatMilks.addItem(fat, cubicLiters);
-                    break;
+                    double fat;
+                    if (input.hasNextDouble() && (fat = input.nextDouble()) > 0) {
+                        input.nextLine();
+                        System.out.println("Hur många liter vill du köpa");
+                        double cubicLiters;
+                        if (input.hasNextDouble() && (cubicLiters = input.nextDouble()) > 0) {
+                            input.nextLine();
+                            oatMilks.addItem(fat, cubicLiters);
+                            break;
+
+                        } else {
+                            errorMessage();
+                            break;
+                        }
+                    } else {
+                        errorMessage();
+                        break;
+                    }
 
                 case "E":
                     System.out.println("");
@@ -74,7 +105,8 @@ public class App {
                     for (OatMilk oatMilk : oatMilks.getOatMilks()) {
                         System.out.println();
                         System.out.println(
-                                oatMilk.getCubicLiters() + " havremjölk som har " + oatMilk.getFat() + "% fetthalt");
+                                oatMilk.getCubicLiters() + " liter havremjölk som har " + oatMilk.getFat()
+                                        + "% fetthalt");
                     }
 
                     System.out.println("*********************************************************");
@@ -111,40 +143,11 @@ public class App {
                     break;
 
                 default:
-                    System.out.println("Nu blev något fel. Försök igen!");
+                    errorMessage();
                     System.out.println("");
                     break;
             }
-            // Create switch to see what the user wants to do. Check for int 1-6.
-            // option 1, create car method
-            // option 2, create candy method
-            // option 3, create pipes method
-            // option 4, create oat milk method
-            // option 5, print what the user has ordered.
-            // option 6, exit the app
-
         }
-        // int length = input.nextInt();
-        // int diameter = input.nextInt();
-        // pipes.addItem(length, diameter);
-        // int length2 = 6;
-        // int diameter2 = 7;
-        // pipes.addItem(diameter2, length2);
-
-        // String color = "red";
-        // String brand = "volvo";
-        // String numberPlate = "KDP 111";
-        // cars.addItem(color, brand, numberPlate);
-
-        // for (Pipe pipe : pipes.getPipes()) {
-        // System.out.println("Pipes length: " + pipe.getLength());
-        // System.out.println("Pipes diameter: " + pipe.getDiameter());
-        // }
-        // for (Car car : cars.getCars()) {
-        // System.out.println("Brand: " + car.getBrand());
-        // System.out.println("Colour: " + car.getColor());
-        // System.out.println("Number plate: " + car.getNumberPlate());
-        // }
         input.close();
     }
 }

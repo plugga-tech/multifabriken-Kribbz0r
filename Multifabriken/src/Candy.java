@@ -1,4 +1,4 @@
-class Candy {
+class Candy extends Product {
     private int amount;
     private String taste;
 

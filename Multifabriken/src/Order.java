@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.*;
 
 public class Order {
 
@@ -16,8 +15,6 @@ public class Order {
 
     // Lista med havremjölk. Havremjölk har två double.
     private ArrayList<OatMilk> oatMilks = new ArrayList<>();
-
-    private ArrayList<ArrayList<Order>> orderList = new ArrayList<>();
 
     // public void combineLists() {
     // orderList.add(candies);
@@ -76,14 +73,6 @@ public class Order {
 
     public void setOatMilks(ArrayList<OatMilk> oatMilks) {
         this.oatMilks = oatMilks;
-    }
-
-    public ArrayList<ArrayList<Order>> getorderList() {
-        return orderList;
-    }
-
-    public void setorderList(ArrayList<ArrayList<Order>> orderList) {
-        this.orderList = orderList;
     }
 
 }

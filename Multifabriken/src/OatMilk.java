@@ -1,4 +1,4 @@
-class OatMilk {
+class OatMilk extends Product {
 
     private double fat;
     private double cubicLiters;
